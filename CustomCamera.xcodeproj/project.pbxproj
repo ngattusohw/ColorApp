@@ -13,6 +13,8 @@
 		9E18F98F1E3764F200EBA699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E18F98E1E3764F200EBA699 /* Assets.xcassets */; };
 		9E18F9921E3764F200EBA699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E18F9901E3764F200EBA699 /* LaunchScreen.storyboard */; };
 		9E18F99A1E37658A00EBA699 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18F9991E37658A00EBA699 /* PhotoViewController.swift */; };
+		C328B6F81ED79A1900EF05E3 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C328B6F71ED79A1900EF05E3 /* opencv2.framework */; };
+		C328B6FC1ED79ADF00EF05E3 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C328B6FB1ED79ADF00EF05E3 /* OpenCVWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		9E18F9911E3764F200EBA699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E18F9931E3764F200EBA699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E18F9991E37658A00EBA699 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		C328B6F71ED79A1900EF05E3 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../../Downloads/opencv2.framework; sourceTree = "<group>"; };
+		C328B6F91ED79ADF00EF05E3 /* CustomCamera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomCamera-Bridging-Header.h"; sourceTree = "<group>"; };
+		C328B6FA1ED79ADF00EF05E3 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		C328B6FB1ED79ADF00EF05E3 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C328B6F81ED79A1900EF05E3 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,13 +63,17 @@
 		9E18F9861E3764F200EBA699 /* CustomCamera */ = {
 			isa = PBXGroup;
 			children = (
+				C328B6F71ED79A1900EF05E3 /* opencv2.framework */,
 				9E18F9871E3764F200EBA699 /* AppDelegate.swift */,
 				9E18F9891E3764F200EBA699 /* ViewController.swift */,
+				C328B6FA1ED79ADF00EF05E3 /* OpenCVWrapper.h */,
+				C328B6FB1ED79ADF00EF05E3 /* OpenCVWrapper.mm */,
 				9E18F9991E37658A00EBA699 /* PhotoViewController.swift */,
 				9E18F98B1E3764F200EBA699 /* Main.storyboard */,
 				9E18F98E1E3764F200EBA699 /* Assets.xcassets */,
 				9E18F9901E3764F200EBA699 /* LaunchScreen.storyboard */,
 				9E18F9931E3764F200EBA699 /* Info.plist */,
+				C328B6F91ED79ADF00EF05E3 /* CustomCamera-Bridging-Header.h */,
 			);
 			path = CustomCamera;
 			sourceTree = "<group>";
@@ -100,6 +111,7 @@
 					9E18F9831E3764F200EBA699 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2TPMYE49M6;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -142,6 +154,7 @@
 			files = (
 				9E18F98A1E3764F200EBA699 /* ViewController.swift in Sources */,
 				9E18F9881E3764F200EBA699 /* AppDelegate.swift in Sources */,
+				C328B6FC1ED79ADF00EF05E3 /* OpenCVWrapper.mm in Sources */,
 				9E18F99A1E37658A00EBA699 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,12 +276,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2TPMYE49M6;
 				INFOPLIST_FILE = CustomCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brianadvent.CustomCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomCamera/CustomCamera-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -277,12 +293,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2TPMYE49M6;
 				INFOPLIST_FILE = CustomCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brianadvent.CustomCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomCamera/CustomCamera-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

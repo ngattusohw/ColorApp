@@ -24,6 +24,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     override func viewDidLoad() {
         super.viewDidLoad()
         shit.text = "Slob on my knob";
+        
+        let openCVWrapper = OpenCVWrapper()
+        openCVWrapper.isThisWorking()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
