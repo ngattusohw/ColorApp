@@ -9,11 +9,4 @@
 //#import "OpenCVWrapper.h"
 #import <opencv2/opencv.hpp>
 
-using namespace std;
 
-
-@implementation OpenCVWrapper
-- (void) isThisWorking {
-    cout << "Hey" << endl;
-}
-@end

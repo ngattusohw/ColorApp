@@ -8,6 +8,3 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OpenCVWrapper : NSObject
-- (void)isThisWorking;
-@end
