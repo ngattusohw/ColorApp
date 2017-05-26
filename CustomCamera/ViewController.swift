@@ -93,16 +93,21 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             
             if let image = self.getImageFromSampleBuffer(buffer: sampleBuffer) {
                 
-                let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoVC") as! PhotoViewController
+//                let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoVC") as! PhotoViewController
+//                
+//                photoVC.takenPhoto = image
+//                
+//                DispatchQueue.main.async {
+//                    self.present(photoVC, animated: true, completion: { 
+//                        self.stopCaptureSession()
+//                    })
+//                    
+//                }
                 
-                photoVC.takenPhoto = image
                 
-                DispatchQueue.main.async {
-                    self.present(photoVC, animated: true, completion: { 
-                        self.stopCaptureSession()
-                    })
-                    
-                }
+                //do comparison here
+                let openCVWrapper = OpenCVWrapper()
+                //openCVWrapper.
             }
             
         
