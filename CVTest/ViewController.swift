@@ -10,8 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    
-    @IBOutlet weak var shit: UITextField!
+
     @IBOutlet var the_test_label: UIView!
     
     let captureSession = AVCaptureSession()
@@ -27,7 +26,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shit.text = "Slob on my knob";
+        //shit.text = "Slob on my knob";
         
         _ = OpenCVWrapper()
         
@@ -90,7 +89,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
     }
     
-    @IBAction func takePhoto(_ sender: Any) {
+    @IBAction func camBtn(_ sender: Any) {
         takePhoto = true
         
     }
@@ -104,7 +103,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             if let image = self.getImageFromSampleBuffer(buffer: sampleBuffer) {
                 
                 // method that takes in image and returns the result (if blue etc)
-                let _ = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoVC") as! PhotoViewController
+//                let _ = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoVC") as! PhotoViewController
                 
                 let kanye = OpenCVWrapper()
                 if (kanye.checkColorImg(image)) {

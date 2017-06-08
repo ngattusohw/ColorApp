@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E546C67F1ED79F740006FEAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E546C67E1ED79F740006FEAD /* Main.storyboard */; };
-		E546C6811ED79F8B0006FEAD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546C6801ED79F8B0006FEAD /* PhotoViewController.swift */; };
+		E525056D1EE8D85500D1FD52 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525056C1EE8D85500D1FD52 /* PhotoViewController.swift */; };
+		E5539B3E1EE7601C00A37AD2 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5539B3D1EE7601C00A37AD2 /* opencv2.framework */; };
+		E5539B401EE7614F00A37AD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5539B3F1EE7614F00A37AD2 /* Main.storyboard */; };
 		E560EAF21ED4BF320019E807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560EAF11ED4BF320019E807 /* AppDelegate.swift */; };
 		E560EAF41ED4BF320019E807 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560EAF31ED4BF320019E807 /* ViewController.swift */; };
 		E560EAF91ED4BF320019E807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E560EAF81ED4BF320019E807 /* Assets.xcassets */; };
 		E560EAFC1ED4BF320019E807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E560EAFA1ED4BF320019E807 /* LaunchScreen.storyboard */; };
 		E560EB071ED4BF320019E807 /* CVTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560EB061ED4BF320019E807 /* CVTestTests.swift */; };
 		E560EB121ED4BF320019E807 /* CVTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560EB111ED4BF320019E807 /* CVTestUITests.swift */; };
-		E560EB201ED4BFAC0019E807 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E560EB1F1ED4BFAC0019E807 /* opencv2.framework */; };
 		E560EB241ED4C0600019E807 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E560EB231ED4C0600019E807 /* OpenCVWrapper.mm */; };
-		E5FACD401EDBB8400071DA98 /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FACD3F1EDBB8400071DA98 /* color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E546C67D1ED79F740006FEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E546C6801ED79F8B0006FEAD /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = ../../../ColorApp/CustomCamera/PhotoViewController.swift; sourceTree = "<group>"; };
+		E525056C1EE8D85500D1FD52 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		E5539B3D1EE7601C00A37AD2 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		E5539B3F1EE7614F00A37AD2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E560EAEE1ED4BF320019E807 /* CVTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E560EAF11ED4BF320019E807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E560EAF31ED4BF320019E807 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,11 +52,9 @@
 		E560EB0D1ED4BF320019E807 /* CVTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E560EB111ED4BF320019E807 /* CVTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTestUITests.swift; sourceTree = "<group>"; };
 		E560EB131ED4BF320019E807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E560EB1F1ED4BFAC0019E807 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		E560EB211ED4C05F0019E807 /* CVTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVTest-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		E560EB221ED4C0600019E807 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCVWrapper.h; path = ../OpenCVWrapper.h; sourceTree = "<group>"; };
 		E560EB231ED4C0600019E807 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCVWrapper.mm; path = ../OpenCVWrapper.mm; sourceTree = "<group>"; };
-		E5FACD3F1EDBB8400071DA98 /* color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E560EB201ED4BFAC0019E807 /* opencv2.framework in Frameworks */,
+				E5539B3E1EE7601C00A37AD2 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,14 +107,13 @@
 		E560EAF01ED4BF320019E807 /* CVTest */ = {
 			isa = PBXGroup;
 			children = (
-				E560EB1F1ED4BFAC0019E807 /* opencv2.framework */,
+				E5539B3D1EE7601C00A37AD2 /* opencv2.framework */,
 				E560EB221ED4C0600019E807 /* OpenCVWrapper.h */,
 				E560EB231ED4C0600019E807 /* OpenCVWrapper.mm */,
-				E5FACD3F1EDBB8400071DA98 /* color.swift */,
 				E560EAF11ED4BF320019E807 /* AppDelegate.swift */,
 				E560EAF31ED4BF320019E807 /* ViewController.swift */,
-				E546C6801ED79F8B0006FEAD /* PhotoViewController.swift */,
-				E546C67E1ED79F740006FEAD /* Main.storyboard */,
+				E525056C1EE8D85500D1FD52 /* PhotoViewController.swift */,
+				E5539B3F1EE7614F00A37AD2 /* Main.storyboard */,
 				E560EAF81ED4BF320019E807 /* Assets.xcassets */,
 				E560EAFA1ED4BF320019E807 /* LaunchScreen.storyboard */,
 				E560EAFD1ED4BF320019E807 /* Info.plist */,
@@ -253,7 +250,7 @@
 			files = (
 				E560EAFC1ED4BF320019E807 /* LaunchScreen.storyboard in Resources */,
 				E560EAF91ED4BF320019E807 /* Assets.xcassets in Resources */,
-				E546C67F1ED79F740006FEAD /* Main.storyboard in Resources */,
+				E5539B401EE7614F00A37AD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +276,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E560EAF41ED4BF320019E807 /* ViewController.swift in Sources */,
-				E546C6811ED79F8B0006FEAD /* PhotoViewController.swift in Sources */,
+				E525056D1EE8D85500D1FD52 /* PhotoViewController.swift in Sources */,
 				E560EAF21ED4BF320019E807 /* AppDelegate.swift in Sources */,
-				E5FACD401EDBB8400071DA98 /* color.swift in Sources */,
 				E560EB241ED4C0600019E807 /* OpenCVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,15 +314,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E546C67E1ED79F740006FEAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E546C67D1ED79F740006FEAD /* Base */,
-			);
-			name = Main.storyboard;
-			path = ../../../ColorApp/CustomCamera;
-			sourceTree = "<group>";
-		};
 		E560EAFA1ED4BF320019E807 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

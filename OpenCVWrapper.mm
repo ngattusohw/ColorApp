@@ -160,14 +160,7 @@ cv::Scalar lower;
     cv::Mat mask;
     //cv::inRange(hsvImage, cv::Scalar(90, 50, 0), cv::Scalar(130,255,255), mask);  //  This picks red color
     //cv::inRange(hsvImage, cv::Scalar(0,50,50), cv::Scalar(30,255,255), mask);  //  This picks blue color
-    //cv::inRange(hsvImage, lower, upper, mask);
-    
-    cv::Mat mask1;
-    cv::Mat mask2;
-    cv::inRange(hsvImage, cv::Scalar(0, 70, 50), cv::Scalar(10, 255, 255), mask1);
-    cv::inRange(hsvImage, cv::Scalar(170, 70, 50), cv::Scalar(180, 255, 255), mask2);
-    
-    mask = mask1 | mask2;
+    cv::inRange(hsvImage, lower, upper, mask);
     
     //self.imageView.image = [self UIImageFromCVMat:mask];
     
