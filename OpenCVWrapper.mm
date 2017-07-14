@@ -4,7 +4,7 @@
 //
 //  Created by Joseph Skimmons on 5/23/17.
 //  Copyright © 2017 Joseph Skimmons. All rights reserved.
-//
+//  Collect Software
 
 #import <opencv2/opencv.hpp>
 #import <opencv2/imgcodecs/ios.h>
@@ -55,15 +55,8 @@ cv::Scalar lower;
         }
     }
     
-    if (count > 200) {
+    if (count > 500) {
         return true;
-//        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Nice!"
-//                                                              message:@"Picture contains Blue"
-//                                                             delegate:nil
-//                                                    cancelButtonTitle:@"Continue"
-//                                                    otherButtonTitles: nil];
-//        
-//        [myAlertView show];
         
     }
     return false;

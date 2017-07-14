@@ -2,9 +2,9 @@
 //  PhotoViewController.swift
 //  CustomCamera
 //
-//  Created by Brian Advent on 24/01/2017.
-//  Copyright © 2017 Brian Advent. All rights reserved.
-//
+//  Created by Joseph Skimmons on 24/01/2017.
+//  Copyright © 2017 Joseph Skimmons. All rights reserved.
+//  Collect Software
 
 import UIKit
 
