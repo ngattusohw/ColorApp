@@ -135,8 +135,12 @@ cv::Scalar lower;
             upper = cv::Scalar(30,255,255);
             break;
         case 2:            //GREEN
-            lower = cv::Scalar(0,50,50);
-            upper = cv::Scalar(30,255,255);
+            lower = cv::Scalar(50,100,100);
+            upper = cv::Scalar(70,255,255);
+            break;
+        case 3:            //POSS YELLOW
+            lower = cv::Scalar(50,50,25);
+            upper = cv::Scalar(255,255,32);
             break;
     }
     

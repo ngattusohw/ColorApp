@@ -1,16 +1,15 @@
 //
-//  MainMenuViewController.swift
+//  SlideMenuViewController.swift
 //  CVTest
 //
-//  Created by Joseph Skimmons on 6/19/17.
+//  Created by Joseph Skimmons on 7/24/17.
 //  Copyright © 2017 Joseph Skimmons. All rights reserved.
 //
 
 import UIKit
-import AVFoundation
 
-class MainMenuViewController: UIViewController {
-    
+class SlideMenuViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,8 +18,7 @@ class MainMenuViewController: UIViewController {
             //menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
-        
+
         // Do any additional setup after loading the view.
     }
 
@@ -29,32 +27,6 @@ class MainMenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelToViewController(segue:UIStoryboardSegue) {
-    }
-    
-    @IBAction func cancelSettingsToViewController(segue:UIStoryboardSegue) {
-    }
-    
-    @IBAction func savesSettingsDetail(segue:UIStoryboardSegue) {
-        
-        let VC = segue.source as! SettingsTableViewController
-        
-
-        let defaults = UserDefaults.standard
-
-        defaults.set(VC.phraseTF.text, forKey: "phrase")
-        defaults.set(VC.lastNameTF.text, forKey: "lastName")
-        defaults.set(VC.firstNameTF.text, forKey: "firstName")
-        defaults.set(VC.bdayDisplay.text, forKey: "bday")
-        
-        
-        let utterance = AVSpeechUtterance(string: "Saved?")
-        utterance.voice = AVSpeechSynthesisVoice(language: "en_US")
-        
-        let synth = AVSpeechSynthesizer()
-        synth.speak(utterance)
-    
-    }
 
     /*
     // MARK: - Navigation
@@ -65,4 +37,5 @@ class MainMenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }

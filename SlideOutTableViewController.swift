@@ -1,61 +1,19 @@
-
 //
-//  SettingsTableViewController.swift
+//  SlideOutTableViewController.swift
 //  CVTest
 //
-//  Created by Joseph Skimmons on 6/19/17.
+//  Created by Joseph Skimmons on 7/24/17.
 //  Copyright © 2017 Joseph Skimmons. All rights reserved.
 //
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController {
+class SlideOutTableViewController: UITableViewController {
 
-    @IBOutlet weak var phraseTF: UITextField!
-    @IBOutlet weak var bdayPick: UIDatePicker!
-    @IBOutlet weak var bdayDisplay: UITextField!
-    @IBOutlet weak var lastNameTF: UITextField!
-    @IBOutlet weak var firstNameTF: UITextField!
-    
-    
-    @IBAction func bdayPickAction(_ sender: Any) {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy"
-        let strDate = dateFormatter.string(from: bdayPick.date)
-        self.bdayDisplay.text = strDate
-    }
-    
     override func viewDidLoad() {
-
         super.viewDidLoad()
         
-        //print(bdayPick.date)
-        
 
-        
-        let defaults = UserDefaults.standard
-        
-        if let phrase = defaults.string(forKey: "phrase") {
-            DispatchQueue.main.async {
-                self.phraseTF.text = phrase
-            }
-        }
-        if let lastName = defaults.string(forKey: "lastName") {
-            DispatchQueue.main.async {
-                self.lastNameTF.text = lastName
-            }
-        }
-        if let firstName = defaults.string(forKey: "firstName") {
-            DispatchQueue.main.async {
-                self.firstNameTF.text = firstName
-            }
-        }
-        if let bday = defaults.string(forKey: "bday") {
-            DispatchQueue.main.async {
-                self.bdayDisplay.text = bday
-            }
-        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -67,43 +25,9 @@ class SettingsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    func getPhrase() -> String{
-//        if let retP = self.phraseTF?.text {
-//            return retP
-//        } else {
-//            return "onbvc"
-//        }
-//    }
-//    
-//    func getLastName() -> String{
-//        if let retL = self.lastNameTF?.text {
-//            return retL
-//        } else {
-//            return "hbvcx"
-//        }
-//    }
-//    
-//    func getFirstName() -> String{
-//        if let retF = self.firstNameTF?.text {
-//            return retF
-//        } else {
-//            return "jgfd"
-//        }
-//        
-//    }
-    
-//    func updateInfo() {
-//        print(self.lastNameTF?.text)
-//        let defaults = UserDefaults.standard
-//        defaults.set(self.phraseTF?.text, forKey: "phraseCurrent")
-//        defaults.set(self.firstNameTF?.text, forKey: "firstCurrent")
-//        defaults.set(self.lastNameTF?.text, forKey: "lastCurrent")
-//    }
-
-    // MARK: - Table view data source
-        
 /*
+    // MARK: - Table view data source
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -114,7 +38,6 @@ class SettingsTableViewController: UITableViewController {
         return 0
     }
 */
-    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

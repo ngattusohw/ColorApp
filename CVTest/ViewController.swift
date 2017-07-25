@@ -134,8 +134,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 }
                 
                 
-//                let img = kanye.testImg(image)
-//                UIImageWriteToSavedPhotosAlbum(img!, nil, nil, nil);
+                let img = kanye.testImg(image)
+                UIImageWriteToSavedPhotosAlbum(img!, nil, nil, nil);
             
  
             }
@@ -179,7 +179,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     func pickColor() {
-        let rand = randomInt(min: 0, max: 1)
+        let rand = randomInt(min: 0, max: 3)
         let jcole = OpenCVWrapper()
         switch(rand){
             case 0:
@@ -199,6 +199,22 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                     
                 }
                 jcole.getCVScalar(1)
+            case 2:
+                colorName =  "green"
+                DispatchQueue.main.async {
+                    self.objLabel.text = "Find " + self.colorName
+                    //self.objLabel.textColor = UIColor.blue
+                    
+                }
+                jcole.getCVScalar(2)
+        case 3:
+            colorName =  "yellow"
+            DispatchQueue.main.async {
+                self.objLabel.text = "Find " + self.colorName
+                //self.objLabel.textColor = UIColor.blue
+                
+            }
+            jcole.getCVScalar(3)
             default:
                 colorName = "ERROR"
         }

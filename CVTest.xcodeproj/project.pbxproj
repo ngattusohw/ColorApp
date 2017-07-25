@@ -20,6 +20,9 @@
 		E560EB241ED4C0600019E807 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E560EB231ED4C0600019E807 /* OpenCVWrapper.mm */; };
 		E5A4DF8E1EF8923A00268438 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4DF8D1EF8923A00268438 /* MainMenuViewController.swift */; };
 		E5A4DF901EF89F8000268438 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4DF8F1EF89F8000268438 /* SettingsTableViewController.swift */; };
+		E5B23BA31F26C12D000F3C1D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B23BA21F26C12D000F3C1D /* SWRevealViewController.m */; };
+		E5B23BA81F26CE0C000F3C1D /* SlideOutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B23BA71F26CE0C000F3C1D /* SlideOutTableViewController.swift */; };
+		E5B23BAA1F26DA50000F3C1D /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B23BA91F26DA50000F3C1D /* SlideMenuViewController.swift */; };
 		E5CCA2941EF1ABEB00D3FDB8 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CCA2931EF1ABEB00D3FDB8 /* button.png */; };
 		E5CCA2961EF1ABFC00D3FDB8 /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CCA2951EF1ABFC00D3FDB8 /* appicon.png */; };
 /* End PBXBuildFile section */
@@ -63,6 +66,10 @@
 		E560EB231ED4C0600019E807 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCVWrapper.mm; path = ../OpenCVWrapper.mm; sourceTree = "<group>"; };
 		E5A4DF8D1EF8923A00268438 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuViewController.swift; path = ../MainMenuViewController.swift; sourceTree = "<group>"; };
 		E5A4DF8F1EF89F8000268438 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		E5B23BA11F26C128000F3C1D /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		E5B23BA21F26C12D000F3C1D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		E5B23BA71F26CE0C000F3C1D /* SlideOutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideOutTableViewController.swift; path = ../SlideOutTableViewController.swift; sourceTree = "<group>"; };
+		E5B23BA91F26DA50000F3C1D /* SlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
 		E5CCA2931EF1ABEB00D3FDB8 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		E5CCA2951EF1ABFC00D3FDB8 /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,17 +129,20 @@
 				E5539B3D1EE7601C00A37AD2 /* opencv2.framework */,
 				E560EB221ED4C0600019E807 /* OpenCVWrapper.h */,
 				E560EB231ED4C0600019E807 /* OpenCVWrapper.mm */,
+				E5B23BA71F26CE0C000F3C1D /* SlideOutTableViewController.swift */,
 				E560EAF11ED4BF320019E807 /* AppDelegate.swift */,
 				E560EAF31ED4BF320019E807 /* ViewController.swift */,
-				E5A4DF8D1EF8923A00268438 /* MainMenuViewController.swift */,
 				E5A4DF8F1EF89F8000268438 /* SettingsTableViewController.swift */,
 				E525056C1EE8D85500D1FD52 /* PhotoViewController.swift */,
+				E5A4DF8D1EF8923A00268438 /* MainMenuViewController.swift */,
 				E5539B3F1EE7614F00A37AD2 /* Main.storyboard */,
+				E5B23BA91F26DA50000F3C1D /* SlideMenuViewController.swift */,
 				E560EAF81ED4BF320019E807 /* Assets.xcassets */,
 				E560EAFA1ED4BF320019E807 /* LaunchScreen.storyboard */,
 				E560EAFD1ED4BF320019E807 /* Info.plist */,
 				E5CCA2931EF1ABEB00D3FDB8 /* button.png */,
 				E5CCA2951EF1ABFC00D3FDB8 /* appicon.png */,
+				E5B23BA41F26C136000F3C1D /* SWRevealViewController */,
 			);
 			path = CVTest;
 			sourceTree = "<group>";
@@ -153,6 +163,15 @@
 				E560EB131ED4BF320019E807 /* Info.plist */,
 			);
 			path = CVTestUITests;
+			sourceTree = "<group>";
+		};
+		E5B23BA41F26C136000F3C1D /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E5B23BA11F26C128000F3C1D /* SWRevealViewController.h */,
+				E5B23BA21F26C12D000F3C1D /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		E5CCA29B1EF1B33800D3FDB8 /* Frameworks */ = {
@@ -306,9 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B23BA31F26C12D000F3C1D /* SWRevealViewController.m in Sources */,
 				E560EAF41ED4BF320019E807 /* ViewController.swift in Sources */,
 				E5A4DF8E1EF8923A00268438 /* MainMenuViewController.swift in Sources */,
 				E5A4DF901EF89F8000268438 /* SettingsTableViewController.swift in Sources */,
+				E5B23BAA1F26DA50000F3C1D /* SlideMenuViewController.swift in Sources */,
+				E5B23BA81F26CE0C000F3C1D /* SlideOutTableViewController.swift in Sources */,
 				E525056D1EE8D85500D1FD52 /* PhotoViewController.swift in Sources */,
 				E560EAF21ED4BF320019E807 /* AppDelegate.swift in Sources */,
 				E560EB241ED4C0600019E807 /* OpenCVWrapper.mm in Sources */,
