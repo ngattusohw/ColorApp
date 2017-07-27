@@ -4,17 +4,23 @@
 //
 //  Created by Joseph Skimmons on 5/23/17.
 //  Copyright © 2017 Joseph Skimmons. All rights reserved.
-//
+//  Collect Software
 
 import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
-    @IBOutlet var the_test_label: UIView!
+    @IBOutlet weak var statusLabel: UILabel!
+//    @IBOutlet var the_test_label: UIView!
+    
+    @IBOutlet weak var objLabel: UILabel!
+
+    @IBOutlet weak var previewImg: UIView!
     
     let captureSession = AVCaptureSession()
-    var previewLayer:CALayer!
+//    var previewLayer:CALayer!
+    var previewLayer: AVCaptureVideoPreviewLayer?
     
     var captureDevice:AVCaptureDevice!
     
@@ -26,7 +32,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //shit.text = "Slob on my knob";
         
         _ = OpenCVWrapper()
         
@@ -38,6 +43,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareCamera()
+        self.statusLabel.text = ""
     }
     
     
@@ -64,8 +70,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         if let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession) {
             self.previewLayer = previewLayer
-            self.view.layer.addSublayer(self.previewLayer)
-            self.previewLayer.frame = self.view.layer.frame
+            self.previewImg.layer.addSublayer(self.previewLayer!)
+//            self.previewImg.layer.layoutManager = CAConstraintLayoutManager.layoutManager();
+//            self.previewImg.layer.addConstraint(CAConstraint.constraintWithAttribute(CAConstraintAttribute.MinX, relativeTo: self.previewImg.layer, attribute: CAConstraintAttribute.MinX, scale: 1, offset: 0));
+//            self.previewImg.layer.addConstraint(CAConstraint.constraintWithAttribute(CAConstraintAttribute.MaxX, relativeTo: self.previewImg.layer, attribute: CAConstraintAttribute.MaxX, scale: 1, offset: 0));
+//            self.previewImg.layer.addConstraint(CAConstraint.constraintWithAttribute(CAConstraintAttribute.Width, relativeTo: self.previewImg.layer, attribute: CAConstraintAttribute.Width, scale: 1, offset: 0));
+//            self.previewImg.layer.addConstraint(CAConstraint.constraintWithAttribute(CAConstraintAttribute.Height, relativeTo: self.previewImg.layer, attribute: CAConstraintAttribute.Height, scale: 1, offset: 0));
+            self.previewLayer?.frame = self.previewImg.layer.frame
             captureSession.startRunning()
             
             let dataOutput = AVCaptureVideoDataOutput()
@@ -107,13 +118,21 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 
                 let kanye = OpenCVWrapper()
                 if (kanye.checkColorImg(image)) {
-//                    let alert = UIAlertController(title: "NICE!", message: "Contains Blue!", preferredStyle: UIAlertControllerStyle.alert)
-//                    alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
-//                    self.present(alert, animated: true, completion: nil)
                     
+                    DispatchQueue.main.async {
+                        self.statusLabel.text = "Nice!"
+                        self.statusLabel.textColor = UIColor.green
+                    }
                     pickColor()
                     
                 }
+                else{
+                    DispatchQueue.main.async {
+                        self.statusLabel.text = "Try Again!"
+                        self.statusLabel.textColor = UIColor.red
+                    }
+                }
+                
                 
                 let img = kanye.testImg(image)
                 UIImageWriteToSavedPhotosAlbum(img!, nil, nil, nil);
@@ -160,21 +179,49 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     func pickColor() {
-        let rand = randomInt(min: 0, max: 1)
+        let rand = randomInt(min: 0, max: 3)
         let jcole = OpenCVWrapper()
         switch(rand){
             case 0:
                 colorName =  "red"
+                DispatchQueue.main.async {
+                    self.objLabel.text = "Find " + self.colorName
+                    //self.objLabel.textColor = UIColor.red
+                }
                 jcole.getCVScalar(0)
+            
+            
             case 1:
                 colorName =  "blue"
+                DispatchQueue.main.async {
+                    self.objLabel.text = "Find " + self.colorName
+                    //self.objLabel.textColor = UIColor.blue
+                    
+                }
                 jcole.getCVScalar(1)
+            case 2:
+                colorName =  "green"
+                DispatchQueue.main.async {
+                    self.objLabel.text = "Find " + self.colorName
+                    //self.objLabel.textColor = UIColor.blue
+                    
+                }
+                jcole.getCVScalar(2)
+        case 3:
+            colorName =  "yellow"
+            DispatchQueue.main.async {
+                self.objLabel.text = "Find " + self.colorName
+                //self.objLabel.textColor = UIColor.blue
+                
+            }
+            jcole.getCVScalar(3)
             default:
                 colorName = "ERROR"
         }
-        let alert = UIAlertController(title: "Objective", message: "Find " + colorName, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Begin", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        
+//        let alert = UIAlertController(title: "Objective", message: "Find " + colorName, preferredStyle: UIAlertControllerStyle.alert)
+//        alert.addAction(UIAlertAction(title: "Begin", style: UIAlertActionStyle.default, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
     }
     
     func randomInt(min: Int, max:Int) -> Int {

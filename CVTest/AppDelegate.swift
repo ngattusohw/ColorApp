@@ -4,6 +4,7 @@
 //
 //  Created by Joseph Skimmons on 5/23/17.
 //  Copyright © 2017 Joseph Skimmons. All rights reserved.
+//  Collect Software
 //
 
 import UIKit

@@ -1,34 +1,25 @@
 //
-//  PhotoViewController.swift
-//  CustomCamera
+//  SlideMenuViewController.swift
+//  CVTest
 //
-//  Created by Joseph Skimmons on 24/01/2017.
+//  Created by Joseph Skimmons on 7/24/17.
 //  Copyright © 2017 Joseph Skimmons. All rights reserved.
-//  Collect Software
+//
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class SlideMenuViewController: UIViewController {
 
-    var takenPhoto:UIImage?
-    
-    @IBOutlet weak var imageView: UIImageView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let availableImage = takenPhoto {
-            //let newImage = filter(originalimage: availableImage)
-            //let colors = UIImage(image: availableImage).getColors(),
-            imageView.image = availableImage
+        
+        if self.revealViewController() != nil {
+            //menuButton.target = self.revealViewController()
+            //menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-    }
-    
-    @IBAction func goBack(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
