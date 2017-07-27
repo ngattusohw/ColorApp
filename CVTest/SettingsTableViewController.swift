@@ -16,7 +16,9 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var bdayDisplay: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var firstNameTF: UITextField!
-    
+    @IBOutlet weak var anxietyS: UISwitch!
+    @IBOutlet weak var dissociationS: UISwitch!
+    @IBOutlet weak var depressionS: UISwitch!
     
     @IBAction func bdayPickAction(_ sender: Any) {
         
@@ -29,10 +31,6 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        
-        //print(bdayPick.date)
-        
-
         
         let defaults = UserDefaults.standard
         
@@ -55,7 +53,43 @@ class SettingsTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.bdayDisplay.text = bday
             }
+            
         }
+
+        
+        if(defaults.bool(forKey: "anxiety") == true){
+            DispatchQueue.main.async {
+                self.anxietyS.setOn(true, animated: false)
+            }
+        }
+        else{
+            DispatchQueue.main.async {
+                self.anxietyS.setOn(false, animated: false)
+            }
+        }
+        
+        if(defaults.bool(forKey: "dissociation") == true){
+            DispatchQueue.main.async {
+                self.dissociationS.setOn(true, animated: false)
+            }
+        }
+        else{
+            DispatchQueue.main.async {
+                self.dissociationS.setOn(false, animated: false)
+            }
+        }
+        
+        if(defaults.bool(forKey: "depression") == true){
+            DispatchQueue.main.async {
+                self.depressionS.setOn(true, animated: false)
+            }
+        }
+        else{
+            DispatchQueue.main.async {
+                self.depressionS.setOn(false, animated: false)
+            }
+        }
+ 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -67,39 +101,6 @@ class SettingsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    func getPhrase() -> String{
-//        if let retP = self.phraseTF?.text {
-//            return retP
-//        } else {
-//            return "onbvc"
-//        }
-//    }
-//    
-//    func getLastName() -> String{
-//        if let retL = self.lastNameTF?.text {
-//            return retL
-//        } else {
-//            return "hbvcx"
-//        }
-//    }
-//    
-//    func getFirstName() -> String{
-//        if let retF = self.firstNameTF?.text {
-//            return retF
-//        } else {
-//            return "jgfd"
-//        }
-//        
-//    }
-    
-//    func updateInfo() {
-//        print(self.lastNameTF?.text)
-//        let defaults = UserDefaults.standard
-//        defaults.set(self.phraseTF?.text, forKey: "phraseCurrent")
-//        defaults.set(self.firstNameTF?.text, forKey: "firstCurrent")
-//        defaults.set(self.lastNameTF?.text, forKey: "lastCurrent")
-//    }
 
     // MARK: - Table view data source
         

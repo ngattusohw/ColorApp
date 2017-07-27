@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E525056D1EE8D85500D1FD52 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525056C1EE8D85500D1FD52 /* PhotoViewController.swift */; };
 		E528B3801F0590B300BD87C8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E528B37F1F0590B300BD87C8 /* CoreData.framework */; };
+		E539472C1F293DF60035A11D /* RightToLeftSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E539472B1F293DF60035A11D /* RightToLeftSegue.swift */; };
+		E539472E1F2941690035A11D /* ReadoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E539472D1F2941690035A11D /* ReadoutViewController.swift */; };
 		E5539B3E1EE7601C00A37AD2 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5539B3D1EE7601C00A37AD2 /* opencv2.framework */; };
 		E5539B401EE7614F00A37AD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5539B3F1EE7614F00A37AD2 /* Main.storyboard */; };
 		E560EAF21ED4BF320019E807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560EAF11ED4BF320019E807 /* AppDelegate.swift */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		E525056C1EE8D85500D1FD52 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		E528B37F1F0590B300BD87C8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E539472B1F293DF60035A11D /* RightToLeftSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RightToLeftSegue.swift; path = ../RightToLeftSegue.swift; sourceTree = "<group>"; };
+		E539472D1F2941690035A11D /* ReadoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadoutViewController.swift; sourceTree = "<group>"; };
 		E5539B3D1EE7601C00A37AD2 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		E5539B3F1EE7614F00A37AD2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E560EAEE1ED4BF320019E807 /* CVTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,10 +133,12 @@
 				E5539B3D1EE7601C00A37AD2 /* opencv2.framework */,
 				E560EB221ED4C0600019E807 /* OpenCVWrapper.h */,
 				E560EB231ED4C0600019E807 /* OpenCVWrapper.mm */,
+				E539472B1F293DF60035A11D /* RightToLeftSegue.swift */,
 				E5B23BA71F26CE0C000F3C1D /* SlideOutTableViewController.swift */,
 				E560EAF11ED4BF320019E807 /* AppDelegate.swift */,
 				E560EAF31ED4BF320019E807 /* ViewController.swift */,
 				E5A4DF8F1EF89F8000268438 /* SettingsTableViewController.swift */,
+				E539472D1F2941690035A11D /* ReadoutViewController.swift */,
 				E525056C1EE8D85500D1FD52 /* PhotoViewController.swift */,
 				E5A4DF8D1EF8923A00268438 /* MainMenuViewController.swift */,
 				E5539B3F1EE7614F00A37AD2 /* Main.storyboard */,
@@ -331,6 +337,8 @@
 				E5A4DF901EF89F8000268438 /* SettingsTableViewController.swift in Sources */,
 				E5B23BAA1F26DA50000F3C1D /* SlideMenuViewController.swift in Sources */,
 				E5B23BA81F26CE0C000F3C1D /* SlideOutTableViewController.swift in Sources */,
+				E539472E1F2941690035A11D /* ReadoutViewController.swift in Sources */,
+				E539472C1F293DF60035A11D /* RightToLeftSegue.swift in Sources */,
 				E525056D1EE8D85500D1FD52 /* PhotoViewController.swift in Sources */,
 				E560EAF21ED4BF320019E807 /* AppDelegate.swift in Sources */,
 				E560EB241ED4C0600019E807 /* OpenCVWrapper.mm in Sources */,

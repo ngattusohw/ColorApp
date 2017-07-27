@@ -46,6 +46,9 @@ class MainMenuViewController: UIViewController {
         defaults.set(VC.lastNameTF.text, forKey: "lastName")
         defaults.set(VC.firstNameTF.text, forKey: "firstName")
         defaults.set(VC.bdayDisplay.text, forKey: "bday")
+        defaults.set(VC.anxietyS.isOn, forKey: "anxiety")
+        defaults.set(VC.dissociationS.isOn, forKey: "dissociation")
+        defaults.set(VC.depressionS.isOn, forKey: "depression")
         
         
         let utterance = AVSpeechUtterance(string: "Saved?")
