@@ -32,6 +32,12 @@ class SettingsTableViewController: UITableViewController {
 
         super.viewDidLoad()
         
+        if self.revealViewController() != nil {
+            //menuButton.target = self.revealViewController()
+            //menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
         let defaults = UserDefaults.standard
         
         if let phrase = defaults.string(forKey: "phrase") {
